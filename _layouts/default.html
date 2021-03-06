@@ -5,9 +5,11 @@
 
   {% include header.html %}
 
-  <body>
-    {% include navbar.html %}
-    {{ content }}
+  <body class="bg-gray-300">
+    <div class="bg-white">
+      {% include navbar.html %}
+      {{ content }}
+    </div>
   </body>
 
   {% include footer.html %}

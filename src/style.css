@@ -4,13 +4,92 @@
 
 @tailwind utilities;
 
-.font-mono {
-  font-family: 'Ubuntu Mono', monospace;
-}
-.font-condensed {
-  font-family: 'Roboto Condensed', monospace;
+/* HTML Elements */
+body {
+  font-family: 'Roboto Slab'
 }
 
+/* Components */
+.navbar-logo {
+  left: calc(50% - 75px);
+}
+
+@keyframes image-loading {
+  0% {background-color: black;}
+  50% {background-color: white;}
+  100% {background-color: black;}
+}
+
+.hero-bg {
+  background: url("/assets/img/hero-bg.png"), rgb(0, 0, 0, 1);
+  background-size: cover;
+  background-position: center;
+  min-height: 45rem;
+  animation: image-loading 5s infinite;
+}
+
+.my-work-img {
+  background-size: cover;
+  background-position: center;
+}
+.my-work-mob { min-height: 46rem; }
+.bucklers-bg { background-image: url("/assets/img/bucklers-bg.png"); }
+.art-bg { background-image: url("/assets/img/art-bg.png"); }
+.throwing-axes-bg {
+  background-position: top;
+  background-image: url("/assets/img/throwing-axes-bg.png");
+}
+.about-bg { background-image: url("/assets/img/about-bg.png"); }
+.working-bg {
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/assets/img/emmet-working.gif");
+}
+.working-bg > div {
+  background-color: rgba(0,0,0,.5);
+}
+.transparent-bg { background-color: rgba(0,0,0,.5); }
+
+
+.collapsible-menu {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 15px);
+}
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.collapsible-menu a {
+  display:block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.collapsible-menu label {
+  display: block;
+  cursor: pointer;
+  background: url('/assets/img/menuicon.png') no-repeat right center;
+}
+input#menu {
+  display: none;
+}
+
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+}
+/* Toggle Effect */
+input:checked ~ label {
+
+}
+input:checked ~ .menu-content {
+  max-height: 100%;
+}
+
+
+/* Extra Utils */
 .-right-7 {
   right: -7rem;
 }
@@ -33,15 +112,18 @@
   transition: all .15s;
 }
 
-.border-ember { border-color: #E04E39; }
-.bg-ember { background-color: #E04E39; }
 .bg-gray-900 { background-color: #3A3D3D; }
+
+.max-w-xxs {
+  max-width: 17rem;
+}
 
 .clip-right-side {
   -webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
 }
 
+/* BLOG POST */
 .blog-post-title-image {
   background-size: cover;
   width: 100%;
@@ -58,10 +140,6 @@
   background-color: #f2f2f2;
   resize: both;
   position: absolute;
-}
-
-.max-w-xxs {
-  max-width: 17rem;
 }
 
 /* GitHub Markdown */
