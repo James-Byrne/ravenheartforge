@@ -49,6 +49,15 @@ body {
 .working-bg > div {
   background-color: rgba(0,0,0,.5);
 }
+.working-bg-mob {
+  min-height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/assets/img/emmet-working.gif");
+}
+.working-bg-mob > div {
+  background-color: rgba(0,0,0,.5);
+}
 .transparent-bg { background-color: rgba(0,0,0,.5); }
 
 
